@@ -30,7 +30,7 @@ sass:
   sass_dir: _sass
 
 # The base hostname & protocol of your site for where absolute urls are needed
-url: "https://biozal.github.io"
+url: "https://www.costoda.tech"
 
 # The shortname for your Disqus site to enable comments.
 disqus:
