@@ -19,12 +19,12 @@ baseurl:
 navigation:
 - text: Home
   url: /#home
-- text: about
-  url: /#about
-- text: Videos 
-  url: /#videos
 - text: Blog
   url: /#blog
+- text: Videos 
+  url: /#videos
+- text: about
+  url: /#about
 
 sass:
   sass_dir: _sass
