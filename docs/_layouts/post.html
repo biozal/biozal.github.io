@@ -1,0 +1,119 @@
+---
+layout: default
+---
+
+{% include nav.html %}
+
+<!-- Blog Detail Start -->
+
+<section class="blog-detail">
+	<div class="container">
+		<div class="blog-detail-banner wow fadeIn">
+			{% if page.banner_image %}
+				<img src="{{site.baseurl}}/assets/images/blog-post-code.jpg" alt="{% if page.banner_image_alt %}{{ page.banner_image_alt }}{% else %}{{ page.title }}{% endif %}">
+			{% endif %}
+		</div>
+		<div class="blog-detail-contents wow fadeInUp">
+			<h2>{{page.title}}</h2>
+			<div class="blog-detail-about clearfix">
+				<div class="media float-left align-items-center">
+					<div class="media-left">
+						<img src="{{site.baseurl}}/assets/images/avatar.jpg" class="media-object" alt="avatar">
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">{{site.author_name}}</h4>
+						<p>{{ page.date | date: "%B %-d, %Y" }}</p>
+					</div>
+				</div>
+				<div class="blog-detail-category float-right">
+					{{ page.category }}
+				</div>
+			</div>
+			<div class="blog-detail-content">
+				{{content}}
+			</div>
+			<div class="blog-detail-footer">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="blog-detail-tags">
+							<ul> 
+								{% if page.tags.size > 0 %}
+								Tags: {% for tag in page.tags %}
+								<li>
+									<a class="tags" href="{{ site.baseurl }}/tags/index.html#{{ tag | cgi_escape }}">{{ tag }}</a>
+								</li>
+								{% unless forloop.last %} {% endunless %}{% endfor %}
+
+								{% endif %}
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="blog-detail-sib">
+					<div class="row">
+						{% if page.previous.url %}
+						<div class="col-md-6">
+							<a href="{{ site.baseurl }}{{page.previous.url}}" class="blog-nav">
+								<span>Previous</span>
+								<p>{{page.previous.title}}</p>
+							</a>
+						</div>
+						{% endif %}
+
+						{% if page.next.url %}
+						<div class="col-md-6">
+							<a href="{{ site.baseurl }}{{page.next.url}}" class="blog-nav">
+								<span>Next</span>
+								<p>{{page.next.title}}</p>
+							</a>
+						</div>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Blog Detail End -->
+
+<!-- Blog start -->
+
+<section id="blog" class="module module-gray blog">
+	<div class="container">
+
+		<div class="module-header">
+			<h2 class="module-title"> Recent Blog </h2>
+			<div class="module-line"></div>
+		</div>
+
+		<div class="row">
+
+        	{% for post in site.posts limit:3 %}
+				<div class="col-md-4">
+					<a href="{{site.baseurl}}{{post.url}}" class="blogList wow fadeInUp">
+						<div class="blogList-img">
+							{% if post.banner_preview %}
+								<img src="{{ "/assets/images/" | append: post.banner_preview | prepend: site.baseurl }}" alt="Blog Desc">
+							{% endif %}
+							{% if post.category %}
+							<span>{{ post.category }}</span>
+							{% endif %}
+						</div>
+						<div class="blogList-desc">
+							<h3>{{ post.title }}</h3>
+							<div>{{ post.description }}</div>
+						</div>
+					</a>
+				</div>
+			{% endfor %}
+
+			<div class="col-md-12">
+				<a class="blog-viewMore" href="{{site.baseurl}}/blog.html">VIEW MORE</a>
+			</div>
+
+		</div><!-- .row -->
+	</div><!-- .container -->
+</section>
+
+<!-- Blog end -->

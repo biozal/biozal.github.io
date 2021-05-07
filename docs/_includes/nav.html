@@ -1,0 +1,32 @@
+<!-- Navigation start -->
+
+<header class="header" id="navbar-custom">
+	
+	<nav class="navbar navbar-expand-lg navbar-custom navbar-light ">
+		<div class="container">
+
+			<a class="navbar-brand  mr-auto " href="{{site.baseurl}}/index.html">Aaron LaBeau</a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div  class="collapse navbar-collapse" id="navbarToggler">
+				<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+					{% for link in site.navigation %}
+				      {% assign current = nil %}
+				      {% if page.url == link.url %}
+				        {% assign current = 'nav-current' %}
+				      {% endif %}
+				      <li class="{{ current }}">
+				        <a class="nav-link {{ current }}" href="{{site.baseurl}}{{ link.url }}">{{ link.text }}</a>
+				      </li>
+				    {% endfor %}
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+</header>
+
+<!-- Navigation end -->
