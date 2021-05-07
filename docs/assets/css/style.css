@@ -1816,7 +1816,8 @@ figure {
 @media (max-width: 991px) {
 
 	.side-image {
-		position: relative;
+		/*position: relative; */
+		display: flex;
 	}
 
 	.list-items-container .list-item {
