@@ -12,9 +12,9 @@ tags: [development, github]
 
 ### Why GitHub Pages? 
 
-When I introduced my new website and blog I had several friends reach out and ask what technology I used.   I told them I picked GitHub Pages, which they followed up with another question of why use that and not some other prebuilt solution.  The decision was very easy to make - I'm a developer and I'm used to GitHub.  GitHub Pages are free, made for developers, and are extremely easy to setup.  You can literally have a site up and running in less than 20 minutes.  Plus since I control the code and most of it is standard HTML/CSS or markdown so I can hack out the site to look however I like without doing a lot of work.      
+When I introduced my new website and blog I had several friends reach out and ask what technology I used.   I told them I picked GitHub Pages, which they followed up with another question of why use that and not some other prebuilt solution.  The decision was very easy to make - I'm a developer and I'm used to GitHub.  GitHub Pages are free, made for developers, and are extremely easy to setup.  You can literally have a site up and running in less than 20 minutes.  
 
-GitHub Pages uses Jekyll - a static website generation technology written in Ruby and is used to convert markdown files into static web pages.  I love the markdown syntax and I can use any markdown editor or  GitHub's site to create new posts.  Since Jekyll themes are just standard HTML and CSS I can take any theme and tweak it to meet my needs without having to learn a new language or platform.  I know there are great tools for React like Gatsby, but really I don't want to spend a lot of time on this project and I want standard HTML and CSS rather than adding React and complex Javascript into the mix.  
+GitHub Pages uses Jekyll - a static website generation technology written in Ruby and is used to convert markdown files into static web pages.  I love the markdown syntax and I can use any markdown editor or  GitHub's site to create new posts.  Since Jekyll themes are just standard HTML and CSS I can take any theme and tweak it to meet my needs without having to learn a new language or platform.  I know there are great tools for React like Gatsby, but really I don't want to spend a lot of time on this project.  I want standard HTML and CSS rather than adding React and complex Javascript into the mix.  
 
 You might have noticed my site has a custom URL and not only does GitHub support this, they will generate a SSL certificate for the site based on your domain name for free.  Below I will break down some rough notes I took when I went through the process for anyone looking to try to do this themselves.  
 
@@ -79,7 +79,7 @@ What a CNAME record does is take my website hostname which is www and domain nam
 
 Once you have the CNAME record created - go back to GitHub and go into the settings of your repo and click the Pages link.  You need to tell GitHub that you are using a custom domain name by typing that in and clicking Save.  There is also a checkbox that states Enforce HTTPS - I highly recommend you check that and save the settings.  GitHub will generate a custom SSL certificate for your site once it validates the configuration.
 
-Now I will note that my GitHub page comes up with DNS warnings saying the zone records weren't setup right when I know for a fact they are.  I think this is a bug in the validation tool they have that validates your DNS hostname settings.  My site is working without issues and you have confirmed that by reading this article.  LOL
+Now I will note that my GitHub page comes up with DNS warnings saying the zone records weren't setup right when I know for a fact they are.  I think this is a bug in the validation tool they have that validates your DNS hostname settings.  My site is working without issues and you have confirmed that by reading this article. 
 
 And that's how I setup my website.  If you want to try this and you run into problems - hit me up on the Twitter and I'll do what I can to help you out.  
 
