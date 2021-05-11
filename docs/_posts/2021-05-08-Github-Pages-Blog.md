@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GitHub Pages - Why/How did I make my website"
+title:  "GitHub Pages - Why/How did I create my website"
 description: "Information on how and why I used GitHub Pages for my blog"
 date:  2021-05-08
 banner_preview: blog-post-code.jpg
