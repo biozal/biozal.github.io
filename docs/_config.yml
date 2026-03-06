@@ -23,6 +23,8 @@ navigation:
   url: /#blog
 - text: Videos 
   url: /#videos
+- text: Open Source
+  url: /#repos
 - text: about
   url: /#about
 
